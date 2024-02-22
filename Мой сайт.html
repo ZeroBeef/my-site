@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Мой сайт</title>
+</head>
+<body bgcolor="green">
+	<h1 align="center"><b><u>Привет!</u></b></h1><br>
+	<h2 align="center"><b>Меня зовут Никита Александрович.</b></h2><br>
+	<h3 align="center"><i>Я занимаюсь программированием с 14 лет, а сейчас еще преподаю его ребятам.</i></h3>
+	<center> <img src="img1.jpg" width="500" height="350" align="bottom"></center>
+	<script> 
+		var colorArray = ["red", "orange", "yellow", "green", "blue", "magenta"];
+		var i = -1;
+		function changeColor() { 
+			i++;
+			if( i > colorArray.length - 1){
+				i = 0;
+			}
+			document.body.style.background = colorArray[i]
+		}
+		function changeColorBack(){
+            i--;
+            if(i<0){
+                i = colorArray.length - 1;
+            }
+            document.body.style.background = colorArray[i];
+        }
+	</script>
+	<center><button onclick="changeColor();">Изменить цвет фона +</button>	
+	<button onclick="changeColorBack();">Изменить цвет фона -</button></center>
+</body>
+</html>
